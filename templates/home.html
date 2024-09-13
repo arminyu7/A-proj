@@ -2,13 +2,11 @@
 
 
 {% block content %}
-    <div class="todo-list">
+        <div class="card">
         {% for todo in todos %}
             <div class="todo-item">
-                <h1>{{ todo.title }}</h1>
-                <h3>{{ todo.body }}</h3>
-                <small>{{ todo.created }}</small>
-            </div>
+                <a class="btn btn-alert" href="{% url 'details' todo.id %}">{{ todo.title }}</a>
+        </div>
         {% endfor %}
     </div>
 {% endblock %}
